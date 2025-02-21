@@ -50,7 +50,6 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
     <>
       <div className="relative z-50 mt-[-1.5rem] flex flex-auto flex-col overflow-hidden rounded-t-3xl p-5">
         <div className="flex-auto overflow-hidden">
-          {/* RESTAURANTE */}
           <div className="flex items-center gap-1.5">
             <Image
               src={product.restaurant.avatarImageUrl}
@@ -64,10 +63,8 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
             </p>
           </div>
 
-          {/* NOME DO PRODUTO */}
           <h2 className="mt-1 text-xl font-semibold">{product.name}</h2>
 
-          {/* PREÇO E QUANTIDADE */}
           <div className="mt-3 flex items-center justify-between">
             <h3 className="text-xl font-semibold">
               {formatCurrency(product.price)}
