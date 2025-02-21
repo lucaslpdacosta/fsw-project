@@ -1,5 +1,5 @@
 {
-  "eslint.working Directories": [
+  "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
