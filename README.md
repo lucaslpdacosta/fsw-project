@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FSW-Donalds  
 
-## Getting Started
+Projeto realizado durante a 7a Full Stack Week. Se consiste em uma página de **auto checkout para pedidos de fast food**, desenvolvido com um design **mobile-first** para melhor experiência em dispositivos móveis. O sistema permite criar pedidos, adicionar ao carrinho e finalizar compras utilizando um CPF. Os pedidos ficam armazenados e podem ser consultados ao informar o CPF do usuário. O status do pedido (**feito, processando, finalizado**) é gerenciado no banco de dados.
 
-First, run the development server:
+## Tecnologias Principais
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O projeto foi desenvolvido com as seguintes tecnologias:  
+
+- Next.js 
+- Prisma ORM
+- PostgreSQL
+- React
+- Tailwind
+- Shadcn  
+- Zod
+
+## Banco de Dados  
+
+O projeto utiliza **Prisma ORM** para gerenciar a persistência de dados. A ferramenta interage com o serviço do banco PostgreSQL hospedado na plataforma [Neon](https://neon.tech/).
+
+![Image](https://github.com/user-attachments/assets/50a6aef2-873c-432d-b4a6-756bfe8f1461)
+
+## Funcionalidades
+
+- Criar pedidos e adicionar produtos ao carrinho
+- Realizar pedidos pela interface, informando CPF
+- Consultar histórico e status de pedidos pelo CPF
+
+## Imagens
+
+![Image](https://github.com/user-attachments/assets/8ecc4605-2075-4a8e-9fe7-43d952c3ff8d)
+
+![Image](https://github.com/user-attachments/assets/74e50b7d-a11e-48d5-8e69-0f2f91911f70)
+
+![Image](https://github.com/user-attachments/assets/797b857a-2633-4666-9273-0f28b053b397)
+
+![Image](https://github.com/user-attachments/assets/f74c0406-b614-451a-873d-394d41f94c2c)
+
+## Como Rodar o Projeto 
+
+###  Clone o repositório
+```sh
+git clone --branch aula_5 --single-branch https://github.com/lucaslpdacosta/fsw-project.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+###  Crie um arquivo .env na raiz do projeto. Substitua "******" por valores reais:
+```sh
+DATABASE_URL=******
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+###  Instale as dependências:
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+###  Inicie o servidor com o script:
+```sh
+npm run dev
+```
 
-## Learn More
+###  Acesse a URL:
+```sh
+http://localhost:3000/fsw-donalds
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Caso queira conferir a versão com deploy feito na Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Escaneie o QR Code:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Image](https://github.com/user-attachments/assets/75420611-72cc-4bd3-aa63-9113ae864ec8)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Ou acesse este [Link](https://fsw-project.vercel.app/fsw-donalds).
