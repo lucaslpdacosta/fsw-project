@@ -76,14 +76,18 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
       const consumptionMethod = searchParams.get(
         "consumptionMethod",
       ) as ConsumptionMethod;
-      await createOrder({
+
+      const order = await createOrder({
         consumptionMethod,
         customerCpf: data.cpf,
         customerName: data.name,
         products,
         slug,
       });
-      const { sessionId } = await createStripeCheckout({ products });
+      const { sessionId } = await createStripeCheckout({
+        products,
+        orderId: order.id,
+      });
       if (!process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY) return;
       const stripe = await loadStripe(
         process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY,
